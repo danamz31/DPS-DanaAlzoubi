@@ -17,3 +17,13 @@ df_v1 = df[df['JAHR']<2021]
 df_v2 = df_v1[df_v1['MONAT'] != 'Summe']
 
 df_v2['MONAT'] = df_v2['MONAT'].apply(lambda x:x[-2:])
+
+df_v2.groupby('MONATSZAHL')['WERT'].sum()
+plt.figure(figsize=(8,6))
+grouped_data = df_v2.groupby('MONATSZAHL')
+summation = grouped_data['WERT'].sum()
+plt.bar(summation.index, summation.values)
+plt.xlabel('MONATSZAHL')
+plt.ylabel('WERT')
+plt.title('Number of Accidents per Category')
+plt.show()
