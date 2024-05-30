@@ -27,3 +27,6 @@ plt.xlabel('MONATSZAHL')
 plt.ylabel('WERT')
 plt.title('Number of Accidents per Category')
 plt.show()
+
+df_v2.info()
+df_v2.describe()
