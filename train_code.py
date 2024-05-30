@@ -52,3 +52,5 @@ preprocessor = ColumnTransformer(
 clf = Pipeline(
     steps=[("preprocessor", preprocessor), ("classifier", DecisionTreeRegressor(max_depth=50))]
 )
+
+clf.fit(X_train.values, y_train.values)
