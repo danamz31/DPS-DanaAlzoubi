@@ -15,3 +15,5 @@ df = df[['MONATSZAHL','AUSPRAEGUNG', 'JAHR', 'MONAT', 'WERT']]
 df_v1 = df[df['JAHR']<2021]
 
 df_v2 = df_v1[df_v1['MONAT'] != 'Summe']
+
+df_v2['MONAT'] = df_v2['MONAT'].apply(lambda x:x[-2:])
