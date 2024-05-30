@@ -55,3 +55,6 @@ clf = Pipeline(
 
 clf.fit(X_train.values, y_train.values)
 print("model score: %.3f" % clf.score(X_test.values, y_test.values))
+
+with open('DPS_Model.pkl', 'wb') as file:
+    pickle.dump(clf, file)
