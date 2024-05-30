@@ -13,3 +13,5 @@ df = pd.read_csv(url_data)
 df = df[['MONATSZAHL','AUSPRAEGUNG', 'JAHR', 'MONAT', 'WERT']]
 
 df_v1 = df[df['JAHR']<2021]
+
+df_v2 = df_v1[df_v1['MONAT'] != 'Summe']
