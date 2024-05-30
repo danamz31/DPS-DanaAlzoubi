@@ -7,4 +7,7 @@ import seaborn as sns
 import pickle
 
 
+url_data = "https://raw.githubusercontent.com/danamz31/DPS-DanaAlzoubi/main/monatszahlen2402_verkehrsunfaelle_export_29.csv"
+df = pd.read_csv(url_data)
+df.tail()
 
