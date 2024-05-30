@@ -48,3 +48,7 @@ preprocessor = ColumnTransformer(
         ("cat", categorical_transformer, categorical_features),
     ]
 )
+
+clf = Pipeline(
+    steps=[("preprocessor", preprocessor), ("classifier", DecisionTreeRegressor(max_depth=50))]
+)
