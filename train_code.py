@@ -30,3 +30,6 @@ plt.show()
 
 df_v2.info()
 df_v2.describe()
+
+df_v2.reset_index(drop=True,inplace = True)
+X_train, X_test, y_train, y_test = train_test_split(df_v2.iloc[:, :-1] , df_v2.iloc[:, -1], test_size=0.2)
