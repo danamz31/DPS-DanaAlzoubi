@@ -30,3 +30,14 @@ with open("DPS_Model.pkl", "rb") as f:
 @app.get('/')
 def index():
     return {'message': 'This is Dana Alzoubi project for DPS bootcamp'}
+
+@app.post('/prediction')
+def get_number_accidents(data: accidents):
+
+    received = data.dict()
+    Category = received['Category']
+    Type = received['Type']
+    Year = received['Year']
+    Month = received['Month']
+    pred_name = model.predict([[Category, Type, Year, Month]]).tolist()[0]
+    return {'prediction': pred_name}
