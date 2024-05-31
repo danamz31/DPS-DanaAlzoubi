@@ -4,11 +4,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+origins = ['*']
 
 app = FastAPI()
 
 
-origins = ['*']
 app.add_middleware(
     CORSMiddleware, 
     allow_origins=origins, 
