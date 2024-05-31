@@ -22,3 +22,7 @@ class accidents(BaseModel):
     Type: str
     Year: int
     Month: int
+
+
+with open("DPS_Model.pkl", "rb") as f:
+    model = pickle.load(f)
