@@ -26,3 +26,7 @@ class accidents(BaseModel):
 
 with open("DPS_Model.pkl", "rb") as f:
     model = pickle.load(f)
+
+@app.get('/')
+def index():
+    return {'message': 'This is Dana Alzoubi project for DPS bootcamp'}
