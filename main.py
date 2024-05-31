@@ -16,3 +16,9 @@ app.add_middleware(
     allow_methods=["*"], 
     allow_headers = ["*"],
 )
+
+class accidents(BaseModel):
+    Category: str
+    Type: str
+    Year: int
+    Month: int
